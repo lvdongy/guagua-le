@@ -1,0 +1,11 @@
+{
+      // 推荐插件
+      "recommendations":[
+        "dbaeumer.vscode-eslint",//eslint 代码格式规范
+        "donjayamanne.githistory",//git history 查看git历史
+        "christian-kohler.path-intellisense", // 路径自动补全
+        "wayou.vscode-todo-highlight",    //TODO: FIXME: 高亮显示
+        "streetsidesoftware.code-spell-checker", //单词拼写检查
+      ]
+      
+}

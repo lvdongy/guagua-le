@@ -1,0 +1,17 @@
+{
+    // 一个tab等于2个空格
+    "editor.tabSize": 2,
+    // 禁用 【根据文件类型自动设置tabsize】
+    "editor.detectIndentation": false,
+    // eslint 保存自动格式化
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+    },
+  // cSpell校验的文件类型
+  "cSpell.enableFiletypes": ["vue"],
+  // 符合拼写的自定义单词
+  "cSpell.words": [
+    "",//例子 可删除
+  ],
+  }
+  
