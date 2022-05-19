@@ -11,7 +11,7 @@ class ScrapAward {
       canvasId: 'canvas',
       backgroundImageUrl: '',
       width: 320,
-      height: 160,
+      height: 570,
       backgroundSize: '100% 100%',
       coverImage: {
         url: '',
@@ -117,6 +117,7 @@ class ScrapAward {
         if (e.changedTouches) {
           e = e.changedTouches[0]
         }
+        console.log(e.clientX, e.pageX, that.canvasOffsetX);
         var x = (e.clientX + document.body.scrollLeft || e.pageX) - that.canvasOffsetX || 0
         var y = (e.clientY + document.body.scrollTop || e.pageY) - that.canvasOffsetY || 0
 
@@ -124,7 +125,8 @@ class ScrapAward {
         ctx.arc(x, y, 10, 0, Math.PI * 2)
         ctx.fill()
       }
-      handleFilledPercentage(getFilledPercentage())
+      // 取消判断大于50%自动开奖
+      // handleFilledPercentage(getFilledPercentage())
     }
     // 计算已经刮过的区域占整个区域的百分比
     function getFilledPercentage() {

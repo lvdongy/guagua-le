@@ -14,17 +14,17 @@ export default {
 
   mounted() {
     let scraAward = new ScrapAward({
+      width: 320,
       height: 570,
       // backgroundImageUrl: require('../assets/images/suporka_home.jpeg'),
       coverImage: {
         url: require('../assets/images/super.jpeg'),
         // color: 'red',
-        width: 428,
+        width: 320,
         height: 570
-      },
-      callback: () => {
-        alert('刮奖结束')
       }
+      // callback: () => {
+      // }
     })
     // document.getElementById('try_again').addEventListener('click', function(e) {
     //   scraAward.restart()
@@ -37,7 +37,7 @@ export default {
 <style lang='scss' scoped>
 .ignore-rem-demo {
   width: 320px;
-  margin: 10px auto 20px auto;
+  // margin: 10px auto 20px auto;
   min-height: 300px;
   position: relative
 }
