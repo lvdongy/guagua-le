@@ -59,8 +59,13 @@ class ScrapAward {
 
     var w = (img.width = this.option.width)
     var h = (img.height = this.option.height)
-    this.canvasOffsetX = canvas.offsetLeft
-    this.canvasOffsetY = canvas.offsetTop
+
+    let { top, left } = canvas.getBoundingClientRect()
+    // this.canvasOffsetX = canvas.offsetLeft
+    // this.canvasOffsetY = canvas.offsetTop
+    this.canvasOffsetX = left
+    this.canvasOffsetY = top
+    console.log('offsetLeft', top, left);
     canvas.width = w
     canvas.height = h
 
@@ -117,7 +122,6 @@ class ScrapAward {
         if (e.changedTouches) {
           e = e.changedTouches[0]
         }
-        console.log(e.clientX, e.pageX, that.canvasOffsetX);
         var x = (e.clientX + document.body.scrollLeft || e.pageX) - that.canvasOffsetX || 0
         var y = (e.clientY + document.body.scrollTop || e.pageY) - that.canvasOffsetY || 0
 
