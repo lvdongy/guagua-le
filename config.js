@@ -9,7 +9,7 @@ module.exports = {
   env: process.env.VUE_APP_ENV,
 
   // 网页标题
-  title: '',
+  title: '快乐呱呱呱呱乐',
   // 网页描述
   description: '',
   // 网页关键词

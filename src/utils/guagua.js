@@ -65,7 +65,6 @@ class ScrapAward {
     // this.canvasOffsetY = canvas.offsetTop
     this.canvasOffsetX = left
     this.canvasOffsetY = top
-    console.log('offsetLeft', top, left);
     canvas.width = w
     canvas.height = h
 

@@ -37,3 +37,26 @@ export const getUrlQuery = (key) => {
   }
   return query[key]
 }
+
+export function formatTime(date, fmt = 'yyyy-MM-dd') {
+  if (!date) {
+    return ''
+  } else if (typeof date === 'number') {
+    date = new Date(date)
+  }
+  const formatObj = {
+    y: date.getFullYear(),
+    M: date.getMonth() + 1,
+    d: date.getDate(),
+    H: date.getHours(),
+    m: date.getMinutes(),
+    s: date.getSeconds(),
+    a: date.getDay()
+  }
+  return fmt.replace(/(y|M|d|H|m|s|a)+/g, (result, key) => {
+    const value = formatObj[key]
+    if (key === 'a' && value !== 0) return ['一', '二', '三', '四', '五', '六'][value - 1]
+    if (key === 'a' && value === 0) return ['日'][value]
+    return result.length > 0 && value < 10 ? '0' + value : String(value)
+  })
+}
